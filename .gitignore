@@ -9,6 +9,7 @@ env
 node_modules
 recreate_db.sh
 static/images/*.ai
+venv
 
 !static/dist/
 
