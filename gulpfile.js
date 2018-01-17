@@ -27,9 +27,9 @@ const paths = {
     src: path.join('static', 'src'),
     sass: path.join('static', 'src', 'sass'),
     scripts: path.join('static', 'src', 'scripts'),
-    dest: path.join('static', 'dist'),
-    css: path.join('static', 'dist', 'css'),
-    js: path.join('static', 'dist', 'js'),
+    dest: path.join('static', '.tmp'),
+    css: path.join('static', '.tmp', 'css'),
+    js: path.join('static', '.tmp', 'js'),
     images: path.join('static', 'images'),
     templates: 'templates'
 };
