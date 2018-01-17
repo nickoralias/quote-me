@@ -84,13 +84,15 @@ WSGI_APPLICATION = 'quote_me.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('RDS_DB_NAME'),
-        'USER': config('RDS_USERNAME'),
-        'PASSWORD': config('RDS_PASSWORD'),
-        'HOST': config('RDS_HOSTNAME'),
-        'PORT': config('RDS_PORT'),
+        'NAME': 'app_user',
+        'USER': 'app_db',
+        'PASSWORD': 'change_me',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
+
+#DATABASES['default'] = dj_database_url.config(conn_max_age=500)
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
