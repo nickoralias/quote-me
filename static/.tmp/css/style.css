@@ -633,47 +633,47 @@ article {
       justify-content: space-around;
 }
 
-.rank button {
-  width: 110px;
-  height: 110px;
-  background-color: whitesmoke;
+.rank a {
+  width: 50px;
+  height: 50px;
+  background-color: black;
   font-size: 3em;
   border-radius: 50%;
 }
 
-.rank button#like {
+.rank a#like {
   background-image: url("../../images/SVG/like.svg");
 }
 
-.rank button#like:active {
+.rank a#like:active {
   background: forestgreen url("../../images/SVG/like-active.svg");
 }
 
-.rank button#like:disabled {
+.rank a#like:disabled {
   background-image: url("../../images/SVG/like-disabled.svg");
 }
 
-.rank button#like.selected {
+.rank a#like.selected {
   background-color: rgba(34, 139, 34, 0.6);
 }
 
-.rank button#dislike {
+.rank a#dislike {
   background-image: url("../../images/SVG/dislike.svg");
 }
 
-.rank button#dislike:active {
+.rank a#dislike:active {
   background: #cc1111 url("../../images/SVG/dislike-active.svg");
 }
 
-.rank button#dislike:disabled {
+.rank a#dislike:disabled {
   background-image: url("../../images/SVG/dislike-disabled.svg");
 }
 
-.rank button#dislike.selected {
+.rank a#dislike.selected {
   background-color: rgba(204, 17, 17, 0.6);
 }
 
-.rank button:disabled {
+.rank a:disabled {
   background-color: whitesmoke;
 }
 
