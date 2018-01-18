@@ -2,7 +2,7 @@
 
 {% block profile_info %}
 <div id="profile-editing">
-    <form action="{% url 'profile' request.user.username %}" method="POST">
+    <form method="post">
         {% csrf_token %}
         {{ user_edit_form.as_p }}
         {{ profile_edit_form.as_p }}

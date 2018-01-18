@@ -10,23 +10,8 @@ $quote-container-color: $theme-color-accent;
     padding: 0 6vw 0 10vw; // shift right in profile view
   }
 
-  article h3 {
-    align-self: flex-start;
-    margin-top: 100px;
-    margin-left: 50px;
-    font-size: 3em;
-    font-family: 'Railway', cursive;
-    padding-bottom: 25px;
-    width: 40vw;
-    border-bottom: 5px double #1b3249;
-  }
-
   #quote_container {
-    font-family: $font-stack;
-    background-color: transparentize(lighten($accent-color, 20%), 0.2);
-    border: 2px solid $quote-container-color;
-    box-shadow: 0 3px 15px transparentize(black, 0.4);
-    overflow: hidden;
+    @include boxify($accent-color, $quote-container-color);
 
     blockquote {
       display: flex;
@@ -34,7 +19,8 @@ $quote-container-color: $theme-color-accent;
       justify-content: center;
       padding: 40px;
       margin: 0;
-      font-size: 1.8em;
+      font-size: 1.5em;
+      line-height: 1.3;
     }
 
     #author {

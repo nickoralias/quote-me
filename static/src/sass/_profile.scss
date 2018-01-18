@@ -1,6 +1,6 @@
 #profile_container {
   // push content below fixed navigation bar
-  margin-top: 8%;
+  margin-top: 10%;
   width: 100vw;
 
   // position in the center in the home view
@@ -13,6 +13,8 @@
   }
 
   #profile {
+    @include boxify($accent-color, $theme-color-main);
+
     // pin to left
     position: fixed;
     left: 0;
