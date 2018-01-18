@@ -9,25 +9,32 @@
     {% endblock user_profile %}
 
     <div id="quotes">
-        <article>
-            <h3>Kwoat of the Day</h3>
-            <div id="quote_container">
+        <article id="quote_container">
+                <div class="rank">
+                    <h3>Kwoat of the Day</h3>
+                    {% block rank_buttons %}
+                    <form action="{% url 'rank_quote' %}" method="post">
+                        {% csrf_token %}
+                        <input name="like"
+                               type="submit"
+                               value=""
+                                {% if rank != 0 %} disabled {% endif %}
+                                {% if rank == 1 %} class="selected" {% endif %}
+                        />
+                    </form>
+                    <form action="{% url 'rank_quote' %}" method="post">
+                        {% csrf_token %}
+                        <input name="dislike"
+                               type="submit"
+                               value=""
+                                {% if rank != 0 %} disabled {% endif %}
+                                {% if rank == -1 %} class="selected" {% endif %}
+                        />
+                    </form>
+                    {% endblock rank_buttons %}
+                </div>
                 <blockquote id="quote_string">{{ quote.text }}</blockquote>
                 <div id="author">&mdash; {{ quote.author }}</div>
-            </div>
-
-            {% block rank_buttons %}
-                <div id="buttons" class="rank">
-                    <button id="like"
-                        {% if rank != 0 %} disabled {% endif %}
-                        {% if rank == 1 %} class="selected" {% endif %}
-                    ></button>
-                    <button id="dislike"
-                        {% if rank != 0 %} disabled {% endif %}
-                        {% if rank == -1 %} class="selected" {% endif %}
-                    ></button>
-                </div>
-            {% endblock rank_buttons %}
         </article>
 
         {% block feed %}
