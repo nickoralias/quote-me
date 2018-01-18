@@ -3,7 +3,7 @@
         <style>
             .x {
                 fill: none;
-                stroke: #dadada;
+                stroke: #f5f5f5;
                 stroke-miterlimit: 10;
                 stroke-width: 25px;
             }

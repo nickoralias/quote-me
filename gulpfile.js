@@ -5,8 +5,8 @@ const browserify = require('browserify'),
     gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     babel = require('gulp-babel'),
-    concat = require('gulp-concat'),
     gulpif = require('gulp-if'),
+    imagemin = require('gulp-imagemin'),
     sass = require("gulp-sass"),
     sassImage = require('gulp-sass-image'),
     sourcemaps = require('gulp-sourcemaps'),
@@ -14,7 +14,7 @@ const browserify = require('browserify'),
     bourbon = require("node-bourbon").includePaths,
     normalize = require('node-normalize-scss').includePaths,
     path = require('path');
-//a8c2 9bbf 0bcd
+
 // environment
 const DEVELOPMENT = 'development';
 const PRODUCTION = 'production';
@@ -30,7 +30,7 @@ const paths = {
     dest: path.join('static', '.tmp'),
     css: path.join('static', '.tmp', 'css'),
     js: path.join('static', '.tmp', 'js'),
-    images: path.join('static', 'images'),
+    images: path.join('static', '.tmp', 'images'),
     templates: 'templates'
 };
 
@@ -50,8 +50,8 @@ const masterSassSources = [ // master sass files
 gulp.task('sass-image', function () {
     return gulp.src(imageSources)
         .pipe(sassImage({
-            images_path: 'static/images/',
-            css_path: 'static/dist/css/'
+            images_path: paths.images,
+            css_path: paths.css
         }))
         .pipe(gulp.dest(paths.sass))
 });
@@ -103,8 +103,12 @@ gulp.task('watch', function () {
     gulp.watch(jsSources, ['js']).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['watch', 'sass', 'js'], function () {
+// live reloading server
+gulp.task('live', ['watch', 'sass', 'js'], function () {
     browserSync.init({
         proxy: BROWSERSYNC_PROXY
     });
 });
+
+// compile static files
+gulp.task('default', ['js', 'sass']);

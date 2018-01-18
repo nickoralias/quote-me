@@ -1,1 +1,14 @@
-<svg id="normal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 494.33 496.08"><defs><style>.cls-1{fill:#009245;}.cls-2{fill:none;stroke:#009245;stroke-miterlimit:10;stroke-width:43.5px;}</style></defs><title>like</title><path class="cls-1" d="M246.67,55A193,193,0,0,1,383.14,384.51,193,193,0,1,1,110.2,111.57,191.73,191.73,0,0,1,246.67,55m0-40c-128.69,0-233,104.32-233,233S118,481,246.67,481s233-104.32,233-233S375.35,15,246.67,15Z"/><path class="cls-2" d="M131.17,256.54c20.62,14.56,80,77,80,77s89.07-131.89,142-170"/></svg>
+<svg id="normal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 494.33 496.08">
+    <defs>
+        <style>
+            .check {
+                fill: none;
+                stroke: #a9a9a9;
+                stroke-miterlimit: 10;
+                stroke-width: 25px;
+            }
+        </style>
+    </defs>
+    <title>like</title>
+    <path class="check" d="M131.17,256.54c20.62,14.56,80,77,80,77s89.07-131.89,142-170"/>
+</svg>
