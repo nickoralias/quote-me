@@ -7,3 +7,8 @@
         <a class="lead" href="{% url 'login' %}">Log in</a>
     {% endif %}
 {% endblock home %}
+
+{% if not user.is_authenticated %}
+    {% block rank_buttons %}
+    {% endblock rank_buttons %}
+{% endif %}
