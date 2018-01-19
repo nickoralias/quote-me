@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+    <defs>
+        <style>
+            .x {
+                fill: none;
+                stroke: #dadada;
+                stroke-miterlimit: 10;
+                stroke-width: 25px;
+            }
+        </style>
+    </defs>
+    <title>dislike-active</title>
+    <g id="dislike">
+        <line class="x" x1="120" y1="130" x2="380" y2="360"/>
+        <line class="x" x1="120" y1="360" x2="380" y2="130"/>
+    </g>
+</svg>

@@ -10,31 +10,31 @@
     <p><span>Email</span><span>{{ profile.user.email }}</span></p>
     <p>
         <span>First name</span>
-        {% if profile.first_name %} <span>{{ profile.first_name }}</span>
+        {% if profile.user.first_name != '' %} <span>{{ profile.user.first_name }}</span>
         {% else %} <a href="{% url 'profile' profile.user.username %}?editing=True">Add your first name!</a>
         {% endif %}
     </p>
     <p>
         <span>Last name</span>
-        {% if profile.last_name %} <span>{{ profile.last_name }}</span>
+        {% if profile.user.last_name != '' %} <span>{{ profile.user.last_name }}</span>
         {% else %} <a href="{% url 'profile' profile.user.username %}?editing=True">Add your last name!</a>
         {% endif %}
     </p>
     <p>
         <span>Location</span>
-        {% if profile.location %} <span>{{ profile.location }}</span>
+        {% if profile.location != '' %} <span>{{ profile.location }}</span>
         {% else %} <a href="{% url 'profile' profile.user.username %}?editing=True">Add your location!</a>
         {% endif %}
     </p>
     <p>
         <span>Birth date</span>
-        {% if profile.birth_date %} <span>{{ profile.birth_date }}</span>
+        {% if profile.birth_date != None %} <span>{{ profile.birth_date }}</span>
         {% else %} <a href="{% url 'profile' profile.user.username %}?editing=True">Add your birth date!</a>
         {% endif %}
     </p>
     <p>
         <span>Bio</span>
-        {% if profile.bio %} <span>{{ profile.bio }}</span>
+        {% if profile.bio != '' %} <span>{{ profile.bio }}</span>
         {% else %} <a href="{% url 'profile' profile.user.username %}?editing=True">Tell us about yourself!</a>
         {% endif %}
     </p>

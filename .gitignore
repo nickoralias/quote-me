@@ -1,18 +1,25 @@
-.env
-.env_test
+# Misc
 .idea
 .sass-cache
 **/__pycache__
-daily_quote/static/daily_quote/images/*.ai
-data
+
+# Environment
+.env
+.env_test
+
+# Virtual environments
+test_env
 env
-node_modules
-recreate_db.sh
-static/images/*.ai
 venv
 
-!static/dist/
+# Data
+data
 
-static/dist/*
-!static/dist/js
-!static/dist/css
+# Source images
+static/**/images/src
+
+# JavaScript API
+static/src/scripts/api.js
+
+node_modules
+recreate_db.sh

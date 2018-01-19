@@ -18,11 +18,12 @@
 {% endblock user_profile %}
 
 {% block feed %}
-    <div id="feed">
+    <section id="feed">
+        <h3 class="fancy">Favorite Kwoats</h3>
         <ul>
         {% for feed_quote in quotes %}
             <li>{{ feed_quote }}</li>
         {% endfor %}
         </ul>
-    </div>
+    </section>
 {% endblock feed %}

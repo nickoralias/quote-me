@@ -1,12 +1,6 @@
-@mixin rank-button($rank, $color) {
-  background-image: image-url("SVG/" + $rank + ".svg");
-  &:active {
-    background: $color image-url("SVG/" + $rank + "-active.svg");
-  }
-  &:disabled {
-    background-image: image-url("SVG/" + $rank + "-disabled.svg");
-  }
-  &.selected {
-    background-color: transparentize($color, 0.4);
-  }
+@mixin boxify($background-color, $border-color) {
+  background-color: transparentize(lighten($background-color, 10%), 0.2);
+  border: 2px solid $border-color;
+  box-shadow: 0 3px 15px transparentize(black, 0.4);
+  overflow: hidden;
 }

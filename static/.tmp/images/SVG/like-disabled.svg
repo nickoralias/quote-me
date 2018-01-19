@@ -1,0 +1,14 @@
+<svg id="normal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 494.33 496.08">
+    <defs>
+        <style>
+            .check {
+                fill: none;
+                stroke: #dadada;
+                stroke-miterlimit: 10;
+                stroke-width: 25px;
+            }
+        </style>
+    </defs>
+    <title>like</title>
+    <path class="check" d="M131.17,256.54c20.62,14.56,80,77,80,77s89.07-131.89,142-170"/>
+</svg>

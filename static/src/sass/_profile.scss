@@ -1,11 +1,11 @@
-#profile_container {
+#container {
   // push content below fixed navigation bar
-  margin-top: 8%;
+  margin-top: 10%;
   width: 100vw;
 
   // position in the center in the home view
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 
   &.active {
     // display on the right in the profile view
@@ -13,22 +13,24 @@
   }
 
   #profile {
+    @include boxify($accent-color, $theme-color-main);
+
     // pin to left
-    position: fixed;
-    left: 0;
-    top: 14%;
+    //position: fixed;
+    //left: 0;
+    //top: 14%;
 
     // display as centered column
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    // the sum of the max-width and padding should be
-    // the complement of the width of #quote_container (including padding)
-    width: 30vw;
-    margin: 0 2vw 0 3vw;
+    // the sum of the max-width and horizontal padding should be
+    // the complement of the width of #quote-container (including padding)
+    width: 35vw;
+    margin: 0 2vw 100px 3vw;
 
-    height: 80vh;
+    //height: 80vh;
     overflow: hidden;
     background: $accent-color fixed;
 
@@ -47,11 +49,10 @@
 
       h3 {
         font-weight: normal;
-        margin: 20px 0;
       }
 
       a {
-        color: inherit;
+        color: inherit !important;
       }
     }
   }
@@ -59,7 +60,9 @@
   #profile-editing, #profile-guest, #profile-user {
     display: flex;
     flex-direction: column;
-    width: 27vw;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 25px;
 
     p {
       width: 100%;
@@ -71,6 +74,21 @@
 
       span.helptext {
         flex-basis: 100%;
+      }
+
+      span:first-child {
+        font-style: oblique;
+        color: #888;
+      }
+
+      &:last-child {
+        span:last-child {
+          flex-basis: 100%;
+        }
+
+        span:last-child {
+          margin-top: 15px;
+        }
       }
     }
   }

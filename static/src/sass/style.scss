@@ -5,10 +5,10 @@
 @import "variables";
 @import "mixins";
 @import "base";
-@import "profile";
+@import "conditional-styles";
 @import "navbar";
-@import "rank_buttons";
-@import "quote_container";
+@import "home";
+@import "profile";
+@import "quote-container";
+@import "rank-buttons";
 @import "feed";
-@import 'sass-image';
-@import "conditional_styles";

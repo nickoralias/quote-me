@@ -1,0 +1,48 @@
+@mixin rank-button($rank, $color) {
+  background-image: image-url("SVG/" + $rank + ".svg");
+
+  &:disabled {
+    border-color: #dadada;
+    background: image-url("SVG/" + $rank + "-disabled.svg");
+  }
+
+  &.selected {
+    border-color: transparentize($color, 0.4);
+    background: transparentize($color, 0.4) image-url("SVG/" + $rank + "-selected.svg");;
+  }
+}
+
+.rank {
+  min-width: 400px;
+  padding: 10px 25px;
+  background-color: $accent-color;
+  border-bottom: solid 1px darkgrey;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  h3 {
+    margin-right: auto;
+  }
+
+  div {
+    display: flex;
+
+    input[type=submit] {
+      width: 50px;
+      height: 50px;
+      margin-left: 25px;
+      background-color: transparent;
+      border: 2px solid darkgrey;
+      border-radius: 50%;
+
+      &[name='like'] {
+        @include rank-button('like', darkgrey);
+      }
+
+      &[name='dislike'] {
+        @include rank-button('dislike', darkgrey);
+      }
+    }
+  }
+}

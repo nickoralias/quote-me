@@ -60,7 +60,7 @@ def user_profile(request, username):
         context['profile'] = profile
         context['quote'] = quoterank.quote
         context['rank'] = quoterank.rank
-        context['quotes'] = Quote.objects.filter(profile=profile)
+        context['quotes'] = Quote.objects.filter(profile=profile).exclude(id=profile.current_quote.id)
 
     except Profile.DoesNotExist:
         raise Http404("Profile Does Not Exist", request.user.username, username)
@@ -68,7 +68,14 @@ def user_profile(request, username):
     return render(request, template_name, context)
 
 
-def rank_quote(request, rank=0):
+def rank_quote(request):
+    if 'like' in request.POST:
+        rank = 1
+    elif 'dislike' in request.POST:
+        rank = -1
+    else:
+        rank = 0
+
     user = request.user
     quote = user.profile.current_quote
     quoterank = QuoteRank.objects.get(profile__user=user, quote=quote)
@@ -83,5 +90,5 @@ def rank_quote(request, rank=0):
         'quotes': Quote.objects.filter(profile__user=user),
     }
 
-    return render(request, 'daily_quote/profile.html', context)
+    return render(request, 'daily_quote/profile_user.html', context)
 

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "The daily quote recommender",
   "scripts": {
-    "start": "concurrently --kill-others \"python manage.py runserver\" \"gulp\" ",
+    "start": "concurrently --kill-others \"python manage.py runserver\" \"gulp live\" ",
     "test": "python manage.py test"
   },
   "repository": {
@@ -33,11 +33,11 @@
     "gulp-babel": "^7.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
     "gulp-sass": "^3.1.0",
     "gulp-sass-image": "^1.0.5",
     "gulp-sourcemaps": "^2.6.3",
     "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.8",
     "jquery": "^3.2.1",
     "node-bourbon": "^4.2.8",
     "node-normalize-scss": "^3.0.0",

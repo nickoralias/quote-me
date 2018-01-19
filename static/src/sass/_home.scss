@@ -1,0 +1,28 @@
+#container {
+  #home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 30vw;
+    }
+  }
+
+  #quotes {
+    margin: 0;
+  }
+
+  #alpha-test {
+    font-family: Helvetica-Neue, sans-serif;
+    font-size: 0.9em;
+    margin-top: 50px;
+    padding: 20px 40px;
+    font-weight: bold;
+    line-height: 1.4;
+    border: 2px solid $alt-color;
+    color: $alt-color;
+    background-color: antiquewhite;
+  }
+}
