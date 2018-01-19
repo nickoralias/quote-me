@@ -13,24 +13,26 @@
                 <div class="rank">
                     <h3 class="fancy">Kwoat of the Day</h3>
                     {% block rank_buttons %}
-                    <form action="{% url 'rank_quote' %}" method="post">
-                        {% csrf_token %}
-                        <input name="like"
-                               type="submit"
-                               value=""
-                                {% if rank != 0 %} disabled {% endif %}
-                                {% if rank == 1 %} class="selected" {% endif %}
-                        />
-                    </form>
-                    <form action="{% url 'rank_quote' %}" method="post">
-                        {% csrf_token %}
-                        <input name="dislike"
-                               type="submit"
-                               value=""
-                                {% if rank != 0 %} disabled {% endif %}
-                                {% if rank == -1 %} class="selected" {% endif %}
-                        />
-                    </form>
+                        <div {% block hide %}{% endblock hide %}>
+                            <form action="{% url 'rank_quote' %}" method="post">
+                                {% csrf_token %}
+                                <input name="like"
+                                       type="submit"
+                                       value=""
+                                        {% if rank != 0 %} disabled {% endif %}
+                                        {% if rank == 1 %} class="selected" {% endif %}
+                                />
+                            </form>
+                            <form action="{% url 'rank_quote' %}" method="post">
+                                {% csrf_token %}
+                                <input name="dislike"
+                                       type="submit"
+                                       value=""
+                                        {% if rank != 0 %} disabled {% endif %}
+                                        {% if rank == -1 %} class="selected" {% endif %}
+                                />
+                            </form>
+                        </div>
                     {% endblock rank_buttons %}
                 </div>
                 <blockquote id="quote_string">{{ quote.text }}</blockquote>

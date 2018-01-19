@@ -727,7 +727,13 @@ a {
   margin-right: auto;
 }
 
-.rank input[type=submit] {
+.rank div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.rank div input[type=submit] {
   width: 50px;
   height: 50px;
   margin-left: 25px;
@@ -736,30 +742,30 @@ a {
   border-radius: 50%;
 }
 
-.rank input[type=submit][name='like'] {
+.rank div input[type=submit][name='like'] {
   background-image: url("../images/SVG/like.svg");
 }
 
-.rank input[type=submit][name='like']:disabled {
+.rank div input[type=submit][name='like']:disabled {
   border-color: #dadada;
   background: url("../images/SVG/like-disabled.svg");
 }
 
-.rank input[type=submit][name='like'].selected {
+.rank div input[type=submit][name='like'].selected {
   border-color: rgba(169, 169, 169, 0.6);
   background: rgba(169, 169, 169, 0.6) url("../images/SVG/like-selected.svg");
 }
 
-.rank input[type=submit][name='dislike'] {
+.rank div input[type=submit][name='dislike'] {
   background-image: url("../images/SVG/dislike.svg");
 }
 
-.rank input[type=submit][name='dislike']:disabled {
+.rank div input[type=submit][name='dislike']:disabled {
   border-color: #dadada;
   background: url("../images/SVG/dislike-disabled.svg");
 }
 
-.rank input[type=submit][name='dislike'].selected {
+.rank div input[type=submit][name='dislike'].selected {
   border-color: rgba(169, 169, 169, 0.6);
   background: rgba(169, 169, 169, 0.6) url("../images/SVG/dislike-selected.svg");
 }
