@@ -1,13 +1,24 @@
+$feed-color: $quote-container-color;
+
 #feed {
-  font-family: $font-stack;
-  background-color: transparentize(lighten($accent-color, 20%), 0.2);
-  border: 2px solid $quote-container-color;
-  margin: 200px 0;
+  @include boxify($accent-color, $feed-color);
+  margin: 100px 0;
+
+  h3 {
+    padding-top: 20px;
+    padding-left: 35px;
+    border-bottom: 2px dotted $feed-color;
+  }
 
   ul {
-    padding: 0 40px;
+    margin: 0;
+    padding: 0;
+
     li {
+      padding: 25px 35px;
       list-style: none;
+      border-bottom: 2px solid $feed-color;
+      line-height: 1.2;
     }
   }
 }

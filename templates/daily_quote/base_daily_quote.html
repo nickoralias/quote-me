@@ -9,7 +9,7 @@
     {% endblock user_profile %}
 
     <div id="quotes">
-        <article id="quote_container">
+        <section id="quote_container">
                 <div class="rank">
                     <h3>Kwoat of the Day</h3>
                     {% block rank_buttons %}
@@ -35,7 +35,7 @@
                 </div>
                 <blockquote id="quote_string">{{ quote.text }}</blockquote>
                 <div id="author">&mdash; {{ quote.author }}</div>
-        </article>
+        </section>
 
         {% block feed %}
         {% endblock feed %}

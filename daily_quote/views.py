@@ -60,7 +60,7 @@ def user_profile(request, username):
         context['profile'] = profile
         context['quote'] = quoterank.quote
         context['rank'] = quoterank.rank
-        context['quotes'] = Quote.objects.filter(profile=profile)
+        context['quotes'] = Quote.objects.filter(profile=profile).exclude(id=profile.current_quote.id)
 
     except Profile.DoesNotExist:
         raise Http404("Profile Does Not Exist", request.user.username, username)

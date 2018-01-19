@@ -53,7 +53,7 @@
       }
 
       a {
-        color: inherit;
+        color: inherit !important;
       }
     }
   }
@@ -73,6 +73,11 @@
 
       span.helptext {
         flex-basis: 100%;
+      }
+
+      span:first-child {
+        font-style: oblique;
+        color: #888;
       }
     }
   }
