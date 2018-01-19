@@ -459,8 +459,12 @@ body {
 
 h3 {
   margin: 0;
-  font-size: 2.3em;
+  font-size: 1.6em;
   padding: 10px;
+}
+
+h3.fancy {
+  font-size: 2.3em;
   font-family: 'Railway', cursive;
 }
 
@@ -565,9 +569,6 @@ a {
   -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
           box-shadow: 0 3px 15px rgba(0, 0, 0, 0.6);
   overflow: hidden;
-  position: fixed;
-  left: 0;
-  top: 14%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -578,9 +579,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 30vw;
-  margin: 0 2vw 0 3vw;
-  height: 80vh;
+  width: 35vw;
+  margin: 0 2vw 100px 3vw;
   overflow: hidden;
   background: whitesmoke fixed;
 }
@@ -606,7 +606,6 @@ a {
 
 #profile_container #profile #profile-header h3 {
   font-weight: normal;
-  margin: 20px 0;
 }
 
 #profile_container #profile #profile-header a {
@@ -621,7 +620,10 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 27vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding: 0 25px;
 }
 
 #profile_container #profile-editing p, #profile_container #profile-guest p, #profile_container #profile-user p {
@@ -650,6 +652,15 @@ a {
   color: #888;
 }
 
+#profile_container #profile-editing p:last-child span:last-child, #profile_container #profile-guest p:last-child span:last-child, #profile_container #profile-user p:last-child span:last-child {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+#profile_container #profile-editing p:last-child span:last-child, #profile_container #profile-guest p:last-child span:last-child, #profile_container #profile-user p:last-child span:last-child {
+  margin-top: 15px;
+}
+
 #profile_container #profile-editing textarea {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -657,11 +668,12 @@ a {
 
 #quotes {
   max-width: 54vw;
-  padding: 0 8vw 0 8vw;
+  margin: 0 8vw 0 8vw;
+  font-family: "Playfair Display", serif;
 }
 
 #profile_container.active #quotes {
-  padding: 0 6vw 0 10vw;
+  margin: 0 6vw 0 5vw;
 }
 
 #quotes #quote_container {

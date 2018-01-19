@@ -11,7 +11,7 @@
     <div id="quotes">
         <section id="quote_container">
                 <div class="rank">
-                    <h3>Kwoat of the Day</h3>
+                    <h3 class="fancy">Kwoat of the Day</h3>
                     {% block rank_buttons %}
                     <form action="{% url 'rank_quote' %}" method="post">
                         {% csrf_token %}

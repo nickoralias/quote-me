@@ -4,10 +4,11 @@ $quote-container-color: $theme-color-accent;
   // the sum of the max-width and padding should be
   // the complement of the width of #profile (including padding)
   max-width: 54vw;
-  padding: 0 8vw 0 8vw; // center in home view
+  margin: 0 8vw 0 8vw; // center in home view
+  font-family: "Playfair Display", serif;
 
   #profile_container.active & {
-    padding: 0 6vw 0 10vw; // shift right in profile view
+    margin: 0 6vw 0 5vw; // shift right in profile view
   }
 
   #quote_container {
