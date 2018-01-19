@@ -129,7 +129,6 @@ AWS_S3_OBJECT_PARAMETERS = {
 }
 AWS_LOCATION = 'static'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static/images"),
     os.path.join(BASE_DIR, "static/.tmp"),
 ]
 STATIC_ROOT = 'static/'
