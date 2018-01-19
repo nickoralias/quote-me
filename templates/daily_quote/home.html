@@ -1,11 +1,10 @@
 {% extends "daily_quote/base_daily_quote.html" %}
+{% load static %}
 
 {% block home %}
-    {% if user.is_authenticated %}
-        <p class="display-4">Hello, {{ user.username }}</p>
-    {% else %}
-        <a class="lead" href="{% url 'login' %}">Log in</a>
-    {% endif %}
+    <div id="home">
+        <img src="{% static 'images/SVG/kwoat-frog.svg' %}" alt="Kwoatzle the frog">
+    </div>
 {% endblock home %}
 
 {% block hide %}

@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 
 {% block daily_quote %}
-{% block home %}
-{% endblock home %}
+<div id="container" {% block profile_active %}{% endblock %}>
+    {% block home %}
+    {% endblock home %}
 
-<div id="profile_container" {% block profile_active %}{% endblock %}>
     {% block user_profile %}
     {% endblock user_profile %}
 
     <div id="quotes">
-        <section id="quote_container">
+        <section id="quote-container">
                 <div class="rank">
                     <h3 class="fancy">Kwoat of the Day</h3>
                     {% block rank_buttons %}
@@ -43,5 +43,4 @@
         {% endblock feed %}
     </div>
 </div>
-
 {% endblock daily_quote %}

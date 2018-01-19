@@ -1,11 +1,11 @@
-#profile_container {
+#container {
   // push content below fixed navigation bar
   margin-top: 10%;
   width: 100vw;
 
   // position in the center in the home view
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 
   &.active {
     // display on the right in the profile view
@@ -26,7 +26,7 @@
     align-items: center;
 
     // the sum of the max-width and horizontal padding should be
-    // the complement of the width of #quote_container (including padding)
+    // the complement of the width of #quote-container (including padding)
     width: 35vw;
     margin: 0 2vw 100px 3vw;
 

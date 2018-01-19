@@ -1,10 +1,16 @@
-#home h3 {
-    align-self: flex-start;
-    margin-top: 100px;
-    margin-left: 50px;
-    font-size: 3em;
-    font-family: 'Railway', cursive;
-    padding-bottom: 25px;
-    width: 40vw;
-    border-bottom: 5px double #1b3249;
+#container {
+  #home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 30vw;
+    }
+  }
+
+  #quotes {
+    margin: 0;
+  }
 }
