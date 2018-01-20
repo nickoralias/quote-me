@@ -571,7 +571,7 @@ a {
 }
 
 #container {
-  margin-top: 10%;
+  margin: 200px 0 100px;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
